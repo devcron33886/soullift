@@ -27,7 +27,7 @@
                                 </a>
                             </h3>
                             <p class="mt-5 line-clamp-3 text-md leading-6 text-black">
-                                {!! Str::limit($post->body, 250) !!}
+                                o
                             </p>
                         </div>
                         <div class="relative mt-8 flex items-center gap-x-4">

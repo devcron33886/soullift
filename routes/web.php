@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\RolesController;
 use App\Http\Controllers\Admin\SubscriberController;
 use App\Http\Controllers\Admin\UsersController;
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ShowblogController;
@@ -15,11 +16,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', LandingPageController::class)->name('welcome');
 
+Route::get('/blog', BlogController::class)->name('blog.index');
+
 Route::get('/blog/{post:slug}', ShowblogController::class)->name('blog.show');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth'], function () {
 
@@ -47,7 +47,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth'], fu
     Route::resource('posts', PostController::class);
 
     // Biography
-
+    Route::delete('biographies/destroy', [BiographyController::class, 'massDestroy'])->name('biographies.massDestroy');
     Route::post('biographies/media', [BiographyController::class, 'storeMedia'])->name('biographies.storeMedia');
     Route::post('biographies/ckmedia', [BiographyController::class, 'storeCKEditorImages'])->name('biographies.storeCKEditorImages');
     Route::resource('biographies', BiographyController::class, ['except' => ['create', 'store']]);

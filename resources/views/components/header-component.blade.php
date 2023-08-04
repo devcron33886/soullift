@@ -21,7 +21,7 @@
             </div>
             <div class="hidden lg:flex lg:gap-x-12">
                 <a href="#" class="uppercase text-sm font-semibold leading-6 text-gray-900">About Me</a>
-                <a href="#" class="uppercase text-sm font-semibold leading-6 text-gray-900">Blog</a>
+                <a href="/blog" class="uppercase text-sm font-semibold leading-6 text-gray-900">Blog</a>
                 <a href="#" class="uppercase text-sm font-semibold leading-6 text-gray-900">Stories</a>
 
 

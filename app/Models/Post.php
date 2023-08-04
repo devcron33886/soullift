@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Scopes\HasPublishedScope;
 use Cviebrock\EloquentSluggable\Sluggable;
 use DateTimeInterface;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -13,9 +14,11 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 class Post extends Model implements HasMedia
 {
-    use SoftDeletes, InteractsWithMedia, HasFactory,Sluggable;
+    use SoftDeletes, InteractsWithMedia, HasFactory, Sluggable;
 
     public $table = 'posts';
+
+    protected $with = ['author', 'categories'];
 
     protected $appends = [
         'featured_image',
@@ -84,5 +87,10 @@ class Post extends Model implements HasMedia
     public function categories()
     {
         return $this->belongsToMany(Category::class);
+    }
+
+    public static function booted()
+    {
+        static::addGlobalScope(new HasPublishedScope);
     }
 }
