@@ -20,7 +20,6 @@ Route::get('/blog', BlogController::class)->name('blog.index');
 
 Route::get('/blog/{post:slug}', ShowblogController::class)->name('blog.show');
 
-
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth'], function () {
 
     Route::get('/', HomeController::class)->name('home');

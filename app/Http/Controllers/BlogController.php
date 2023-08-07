@@ -17,7 +17,8 @@ class BlogController extends Controller
         SEOTools::opengraph()->addProperty('type', 'articles');
         SEOTools::twitter()->setSite('@LuizVinicius73');
         SEOTools::jsonLd()->addImage('https://soullift.info/img/logo.jpg');
-        $posts=Post::query()->latest()->orderByDesc('created_at')->paginate(10);
-        return view('blog.index',['posts'=>$posts]);
+        $posts = Post::query()->latest()->orderByDesc('created_at')->paginate(10);
+
+        return view('blog.index', ['posts' => $posts]);
     }
 }

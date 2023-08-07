@@ -16,15 +16,15 @@
 </head>
 
 <body class="antialiased">
-    <div class="bg-white">
+    <div class="bg-gray-900">
         <x-header-component />
 
         <main
-            class="h-full mb-20 relative max-w-[52rem] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 lg:max-w-7xl md:w-auto mt-24">
+            class="h-full mb-20 relative max-w-[52rem] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 lg:max-w-7xl md:w-auto">
 
-            <div class="mb-16 md:mb-36 flex">
-                <div class="md:w-3/4 text-md md:text-lg md:leading-8">
-                    <h1 class="text-4xl md:text-6xl font-extrabold text-black">Blog
+            <div class="mb-16 md:mb-36 flex mt-20">
+                <div class="md:w-3/4 text-md md:text-lg md:leading-8 mt-24">
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-amber-700">Blog
                     </h1>
 
                 </div>
@@ -34,7 +34,7 @@
                 <div class="md:w-2/3">
                     <div class="mr-0 md:mr-20">
                         <h2
-                            class="mb-5 md:mb-10 flex items-center after:ml-4 after:bg-gray-300 after:h-px after:w-1/2 after:grow uppercase text-xs font-medium">
+                            class="mb-5 md:mb-10 flex items-center after:ml-4 after:bg-amber-700 after:h-px after:w-1/2 after:grow uppercase text-xs font-medium text-amber-700">
                             Blog
                         </h2>
 
@@ -54,35 +54,30 @@
                                         </div>
                                         <div>
                                             <div class="flex items-center gap-x-4 text-xs">
-                                                <time datetime="2020-03-16" class="text-gray-500">{{ $post->created_at
+                                                <time datetime="2020-03-16" class="text-white">{{ $post->created_at
                                                     }}</time>
-                                                <a href=""
-                                                    class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">Marketing</a>
                                             </div>
-                                            <div class="group relative max-w-xl">
+                                            <div class="group relative max-w-xl mt-5">
                                                 <h3
-                                                    class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
+                                                    class="text-lg font-semibold leading-6 text-white group-hover:text-gray-200">
                                                     <a href="{{ route('blog.show',$post->slug)}}">
                                                         <span class="absolute inset-0"></span>
                                                         {{ $post->title }}
                                                     </a>
                                                 </h3>
-                                                <p class="mt-5 text-sm leading-6 text-gray-600">{!!
-                                                    Str::limit($post->body,
+                                                <p class="text-white">{!!Str::limit($post->body,
                                                     250) !!}</p>
                                             </div>
-                                            <div class="mt-6 flex border-t border-gray-900/5 pt-6">
+                                            <div class="mt-4 flex border-t border-gray-900/5 pt-6">
                                                 <div class="relative flex items-center gap-x-4">
-                                                    <img src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                                                        alt="" class="h-10 w-10 rounded-full bg-gray-50">
                                                     <div class="text-sm leading-6">
-                                                        <p class="font-semibold text-gray-900">
+                                                        <p class="font-semibold text-white">
                                                             <a href="#">
                                                                 <span class="absolute inset-0"></span>
-                                                                {{ $post->author->name }}
+                                                                By {{ $post->author->name }}
                                                             </a>
                                                         </p>
-                                                        <p class="text-gray-600">Co-Founder / CTO</p>
+                                                        
                                                     </div>
                                                 </div>
                                             </div>
@@ -101,17 +96,19 @@
                 <div class="md:w-1/3">
                     <div class="mr-0 md:mr-0">
                         <h2
-                            class="mb-5 md:mb-10 flex items-center after:ml-4 after:bg-gray-300 after:h-px after:w-1/2 after:grow uppercase text-xs font-medium">
+                            class="mb-5 md:mb-10 flex items-center after:ml-4 after:bg-amber-700 after:h-px after:w-1/2 after:grow uppercase text-xs font-medium text-amber-700">
                             Topics
                         </h2>
 
                         <div>
+                            @foreach($categories as $category)
                             <a href="https://themsaid.com/topic/php-laravel" class="flex items-center mb-5 block">
-                                <h3 class="text-sm md:text-md font-medium">PHP &amp; Laravel</h3>
+                                <h3 class="text-sm md:text-md font-medium text-white">{{ $category->title}}</h3>
                                 <span
-                                    class="rounded-full invisible md:visible border border-gray-200 text-xs px-2 py-1 ml-auto">11
+                                    class="rounded-full text-white invisible md:visible border border-gray-200 text-xs px-2 py-1 ml-auto">{{ $category->posts->count()}}
                                     posts</span>
                             </a>
+                            @endforeach
 
                         </div>
                     </div>
