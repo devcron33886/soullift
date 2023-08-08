@@ -12,9 +12,11 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ShowblogController;
+use App\Http\Controllers\AboutController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', LandingPageController::class)->name('welcome');
+Route::get('/about-me',AboutController::class)->name('about-me');
 
 Route::get('/blog', BlogController::class)->name('blog.index');
 

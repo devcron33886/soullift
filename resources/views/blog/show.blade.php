@@ -5,7 +5,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title> {{ trans('blog.site_title') }}</title>
+    {!! SEO::generate() !!}
+    
+    <meta name="description" content="{!! $post->body !!}">
+    <meta name="keywords" content="comma, separated, keywords, related, to, your, content">
+    <meta name="author" content="{{ $post->author->name }}">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,46 +22,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <title>{{ $post->title }}</title>
 </head>
-
-<body class="antialiased">
-    <div class="bg-white">
-        <x-header-component />
-        <main class="h-full mb-20 relative max-w-[52rem] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 lg:max-w-7xl md:w-auto">
-
-            <div class="lg:max-w-[52rem] mx-auto mb-20">
-                <h1 class="font-extrabold text-3xl md:text-5xl md:leading-snug -mt-3">{{ $post->title }}</h1>
-
-                <p class="mt-5 uppercase text-xs inline-flex space-x-2 font-medium text-gray-500">
-                    <span>{{ $post->created_at }}</span>
-                    <span
-                        class="before:mr-2 before:bg-gray-400 before:w-[2px] before:h-[2px] before:rounded-full flex items-center">5
-                        min read</span>
-                </p>
-            </div>
-
-            <article class="mx-auto md:mb-44 prose text-black md:prose-lg">
-                {!! $post->body !!}
-                <hr>
-
-                <div class="flex items-center not-prose">
-                    <img src="https://themsaid.com/img/avatar.png" alt=""
-                        class="w-10 md:w-32 rounded-full md:mr-5">
-                    <p class="pl-5 text-sm md:text-lg">
-                        I'm
-                        <span class="font-medium">{{ $post->author->name}}</span>. I work with companies and teams all over the
-                        world to build and scale web applications in the cloud.
-                        Find me on twitter <a href="https://twitter.com/themsaid" target="_blank">@themsaid</a>.
-                    </p>
-                </div>
-
+<body class="bg-gray-900">
+    <x-header-component/>
+    <div class="py-12">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mt-8 py-24 px-4 flex">
+            <article class="prose max-w-none text-white">
+                <h1 class="text-4xl font-bold mb-4">Title of the Blog Post</h1>
+                <p class="mb-4">Published on {{ $post->updated_at}}</p>
+                <img src="https://via.placeholder.com/800x400" alt="Blog Post Image" class="mb-8 rounded-lg">
+                <p class="mt-5">{!! $post->body !!}</p> 
             </article>
-
-        </main>
-
-        <livewire:subscriber-component />
+        </div>
     </div>
-
+    <livewire:subscriber-component />
+    <x-footer-component/>
 </body>
-
 </html>

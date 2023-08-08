@@ -3,7 +3,7 @@
         <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
             <div class="flex lg:flex-1">
                 <a href="/" class="-m-1.5 p-1.5">
-                    <h1 class="h-8 w-auto text-2xl font-bold text-amber-600">{{ trans('blog.site_title') }}</h1>
+                    <h1 class="h-8 w-auto text-2xl font-extrabold text-white">{{ trans('blog.site_title') }}</h1>
                 </a>
             </div>
             <div class="flex lg:hidden">
@@ -19,9 +19,9 @@
                 </button>
             </div>
             <div class="hidden lg:flex lg:gap-x-12">
-                <a href="#" class="uppercase text-sm font-semibold leading-6 text-amber-600">About Me</a>
-                <a href="/blog" class="uppercase text-sm font-semibold leading-6 text-amber-600">Blog</a>
-                <a href="#" class="uppercase text-sm font-semibold leading-6 text-amber-600">Stories</a>
+                <a href="/about-me" class="uppercase italic hover:not-italic  font-extrabold leading-6 text-white">About Me</a>
+                <a href="/blog" class="uppercase italic hover:not-italic  font-extrabold leading-6 text-white">Blog</a>
+                <a href="#" class="uppercase italic hover:not-italic  font-extrabold leading-6 text-white">Stories</a>
 
 
             </div>
@@ -35,7 +35,7 @@
                 @click.away="open = false">
                 <div class="flex items-center justify-between">
                     <a href="/" class="-m-1.5 p-1.5">
-                        <h1 class="h-8 w-auto text-2xl font-bold text-amber-600">{{ trans('blog.site_title') }}</h1>
+                        <h1 class="h-8 w-auto text-2xl font-bold text-white">{{ trans('blog.site_title') }}</h1>
 
                     </a>
                     <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" @click="open = false">
@@ -50,12 +50,12 @@
                     <div class="-my-6 divide-y divide-gray-500/10">
                         <div class="space-y-2 py-6">
                             <a href="#"
-                                class="uppercase -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-amber-600 hover:bg-gray-50">About
+                                class="uppercase -mx-3 block rounded-lg px-3 py-2 text-base font-extrabold leading-7 text-white hover:bg-gray-50">About
                                 me</a>
                             <a href="#"
-                                class="uppercase -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-amber-600 hover:bg-gray-50">Blog</a>
+                                class="uppercase -mx-3 block rounded-lg px-3 py-2 text-base font-extrabold leading-7 text-white hover:bg-gray-50">Blog</a>
                             <a href="#"
-                                class="uppercase -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-amber-600 hover:bg-gray-50">Stories</a>
+                                class="uppercase -mx-3 block rounded-lg px-3 py-2 text-base font-extrabold leading-7 text-white hover:bg-gray-50">Stories</a>
 
                         </div>
                     </div>

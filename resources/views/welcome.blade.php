@@ -35,8 +35,8 @@
 
                         </div>
                     </div>
-                    <img src="{{ asset('images/Lysiane Byukusenge.webp')}}" alt=""
-                        class="mt-0 aspect-[4/5] w-full max-w-lg rounded-2xl object-cover sm:mt-0 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-0">
+                    <img src="{{ asset('images/hero.png')}}" alt=""
+                        class="mt-5 aspect-[4/5] w-full max-w-lg rounded-2xl object-cover sm:mt-0 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-0">
                 </div>
             </div>
             
