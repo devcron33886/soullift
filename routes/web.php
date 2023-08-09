@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\Admin\BiographyController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\HomeController;
@@ -9,18 +10,20 @@ use App\Http\Controllers\Admin\RolesController;
 use App\Http\Controllers\Admin\SubscriberController;
 use App\Http\Controllers\Admin\UsersController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\CategoryShowController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ShowblogController;
-use App\Http\Controllers\AboutController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', LandingPageController::class)->name('welcome');
-Route::get('/about-me',AboutController::class)->name('about-me');
+Route::get('/about-me', AboutController::class)->name('about-me');
 
 Route::get('/blog', BlogController::class)->name('blog.index');
 
 Route::get('/blog/{post:slug}', ShowblogController::class)->name('blog.show');
+
+Route::get('/category/{category:slug}', CategoryShowController::class)->name('category.show');
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth'], function () {
 

@@ -8,6 +8,7 @@ class ShowblogController extends Controller
 {
     public function __invoke(Post $post)
     {
+
         return view('blog.show', ['post' => $post]);
     }
 }

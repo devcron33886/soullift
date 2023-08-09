@@ -29,7 +29,7 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mt-8 py-24 px-4 flex">
             <article class="prose max-w-none text-white">
-                <h1 class="text-4xl font-bold mb-4">Title of the Blog Post</h1>
+                <h1 class="text-4xl font-bold mb-4">{{ $post->title }}</h1>
                 <p class="mb-4">Published on {{ $post->updated_at}}</p>
                 <img src="https://via.placeholder.com/800x400" alt="Blog Post Image" class="mb-8 rounded-lg">
                 <p class="mt-5">{!! $post->body !!}</p> 

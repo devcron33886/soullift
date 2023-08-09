@@ -18,6 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <title>Blog</title>
 </head>
 
 <body class="antialiased">
@@ -29,7 +30,7 @@
 
             <div class="mb-16 md:mb-36 flex mt-20">
                 <div class="md:w-3/4 text-md md:text-lg md:leading-8 mt-24">
-                    <h1 class="text-4xl md:text-6xl font-extrabold text-amber-700">Blog
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-amber-700">{{ $category->title }}
                     </h1>
 
                 </div>
@@ -40,7 +41,7 @@
                     <div class="mr-0 md:mr-20">
                         <h2
                             class="mb-5 md:mb-10 flex items-center after:ml-4 after:bg-amber-700 after:h-px after:w-1/2 after:grow uppercase text-xs font-medium text-amber-700">
-                            Blog
+                            {{ $category->title }}
                         </h2>
 
                         <div class="mx-auto max-w-2xl lg:max-w-4xl">
