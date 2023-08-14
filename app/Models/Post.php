@@ -5,16 +5,18 @@ namespace App\Models;
 use App\Scopes\HasPublishedScope;
 use Cviebrock\EloquentSluggable\Sluggable;
 use DateTimeInterface;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Spatie\Image\Exceptions\InvalidManipulation;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 class Post extends Model implements HasMedia
 {
-    use SoftDeletes, InteractsWithMedia, HasFactory, Sluggable;
+    use SoftDeletes, InteractsWithMedia, Sluggable;
 
     public $table = 'posts';
 
@@ -24,7 +26,7 @@ class Post extends Model implements HasMedia
         'featured_image',
     ];
 
-    protected $dates = [
+    protected array $dates = [
         'created_at',
         'updated_at',
         'deleted_at',
@@ -56,15 +58,18 @@ class Post extends Model implements HasMedia
         ];
     }
 
-    protected function serializeDate(DateTimeInterface $date)
+    protected function serializeDate(DateTimeInterface $date): string
     {
         return $date->format('Y-m-d H:i:s');
     }
 
+    /**
+     * @throws InvalidManipulation
+     */
     public function registerMediaConversions(Media $media = null): void
     {
-        $this->addMediaConversion('thumb')->fit('crop', 50, 50);
-        $this->addMediaConversion('preview')->fit('crop', 120, 120);
+        $this->addMediaConversion('thumb')->fit('crop', 720, 400);
+        $this->addMediaConversion('preview')->fit('crop', 1080, 720);
     }
 
     public function getFeaturedImageAttribute()
@@ -79,17 +84,17 @@ class Post extends Model implements HasMedia
         return $file;
     }
 
-    public function author()
+    public function author(): BelongsTo
     {
         return $this->belongsTo(User::class, 'author_id');
     }
 
-    public function categories()
+    public function categories(): BelongsToMany
     {
         return $this->belongsToMany(Category::class);
     }
 
-    public static function booted()
+    public static function booted(): void
     {
         static::addGlobalScope(new HasPublishedScope);
     }

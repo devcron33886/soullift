@@ -21,7 +21,7 @@
             <div class="hidden lg:flex lg:gap-x-12">
                 <a href="/about-me" class="uppercase italic hover:not-italic  font-extrabold leading-6 text-white">About Me</a>
                 <a href="/blog" class="uppercase italic hover:not-italic  font-extrabold leading-6 text-white">Blog</a>
-                <a href="#" class="uppercase italic hover:not-italic  font-extrabold leading-6 text-white">Stories</a>
+                <a href="{{ route('stories.index')}}" class="uppercase italic hover:not-italic  font-extrabold leading-6 text-white">Stories</a>
 
 
             </div>
@@ -54,7 +54,7 @@
                                 me</a>
                             <a href="#"
                                 class="uppercase -mx-3 block rounded-lg px-3 py-2 text-base font-extrabold leading-7 text-white hover:bg-gray-50">Blog</a>
-                            <a href="#"
+                            <a href="{{ route('stories.index')}}"
                                 class="uppercase -mx-3 block rounded-lg px-3 py-2 text-base font-extrabold leading-7 text-white hover:bg-gray-50">Stories</a>
 
                         </div>

@@ -68,6 +68,18 @@
                         </a>
                     </li>
                 @endcan
+                @can('story_access')
+                    <li class="nav-item">
+                        <a href="{{ route("admin.stories.index") }}" class="nav-link {{ request()->is("admin/stories") || request()->is("admin/stories/*") ? "active" : "" }}">
+                            <i class="fa-fw nav-icon fas fa-align-center">
+
+                            </i>
+                            <p>
+                                {{ trans('cruds.story.title') }}
+                            </p>
+                        </a>
+                    </li>
+                @endcan
                 @can('user_management_access')
                     <li class="nav-item has-treeview {{ request()->is("admin/permissions*") ? "menu-open" : "" }} {{ request()->is("admin/roles*") ? "menu-open" : "" }} {{ request()->is("admin/users*") ? "menu-open" : "" }}">
                         <a class="nav-link nav-dropdown-toggle {{ request()->is("admin/permissions*") ? "active" : "" }} {{ request()->is("admin/roles*") ? "active" : "" }} {{ request()->is("admin/users*") ? "active" : "" }}" href="#">

@@ -24,8 +24,7 @@
     <div class="bg-gray-900">
         <x-header-component />
 
-        <main
-            class="h-full mb-20 relative max-w-[52rem] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 lg:max-w-7xl md:w-auto">
+        <main class="h-full mb-20 relative max-w-[52rem] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 lg:max-w-7xl md:w-auto">
 
             <div class="mb-16 md:mb-36 flex mt-20">
                 <div class="md:w-3/4 text-md md:text-lg md:leading-8 mt-24">
@@ -50,9 +49,10 @@
                                     <a href="{{ route('blog.show',$post->slug)}}">
                                         <div
                                             class="relative aspect-[16/9] sm:aspect-[2/1] lg:aspect-square lg:w-64 lg:shrink-0">
-                                            <img src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80"
-                                                alt=""
+                                            @if($post->featured_image)
+                                            <img src="{{ $post->featured_image->getUrl('preview') }}" alt=""
                                                 class="absolute inset-0 h-full w-full rounded-2xl bg-gray-50 object-cover">
+                                            @endif
                                             <div
                                                 class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10">
                                             </div>
@@ -76,13 +76,13 @@
                                             <div class="mt-4 flex border-t border-gray-900/5 pt-6">
                                                 <div class="relative flex items-center gap-x-4">
                                                     <div class="text-sm leading-6">
-                                                        <p class="font-semibold text-white">
-                                                            <a href="#">
-                                                                <span class="absolute inset-0"></span>
-                                                                By {{ $post->author->name }}
-                                                            </a>
+                                                        
+                                                        <p class="text-white">
+                                                            <span class="absolute inset-0"></span>
+                                                            {{ $post->author->name }}
                                                         </p>
                                                         
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -107,10 +107,14 @@
 
                         <div>
                             @foreach($categories as $category)
-                            <a href="{{ route('category.show',$category->slug)}}" class="flex items-center mb-5 block">
-                                <h3 class="text-sm md:text-md font-medium text-white">{{ $category->title}}</h3>
+                            <a href="{{ route('category.show',$category->slug)}}" class="flex items-center mb-5 text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+</svg>
+                                <h3 class="text-sm md:text-md font-medium text-white ml-4">{{ $category->title}}</h3>
                                 <span
-                                    class="rounded-full text-white invisible md:visible border border-gray-200 text-xs px-2 py-1 ml-auto">{{ $category->posts->count()}}
+                                    class="rounded-full text-white invisible md:visible border border-gray-200 text-xs px-2 py-1 ml-auto">{{
+                                    $category->posts->count()}}
                                     posts</span>
                             </a>
                             @endforeach
@@ -125,7 +129,7 @@
 
         <livewire:subscriber-component />
     </div>
-<x-footer-component/>
+    <x-footer-component />
 </body>
 
 </html>

@@ -165,5 +165,27 @@ return [
             'deleted_at_helper' => ' ',
         ],
     ],
+    'story' => [
+        'title' => 'Story',
+        'title_singular' => 'Story',
+        'fields' => [
+            'id' => 'ID',
+            'id_helper' => ' ',
+            'title' => 'Title',
+            'title_helper' => ' ',
+            'slug' => 'Slug',
+            'slug_helper' => ' ',
+            'body' => 'Body',
+            'body_helper' => ' ',
+            'featured_image' => 'Featured Image',
+            'featured_image_helper' => ' ',
+            'created_at' => 'Created at',
+            'created_at_helper' => ' ',
+            'updated_at' => 'Updated at',
+            'updated_at_helper' => ' ',
+            'deleted_at' => 'Deleted at',
+            'deleted_at_helper' => ' ',
+        ],
+    ],
 
 ];

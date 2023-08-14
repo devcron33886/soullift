@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {!! SEO::generate() !!}
-    
+
     <meta name="description" content="{!! $post->body !!}">
     <meta name="keywords" content="comma, separated, keywords, related, to, your, content">
     <meta name="author" content="{{ $post->author->name }}">
@@ -24,19 +24,23 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <title>{{ $post->title }}</title>
 </head>
+
 <body class="bg-gray-900">
-    <x-header-component/>
+    <x-header-component />
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mt-8 py-24 px-4 flex">
             <article class="prose max-w-none text-white">
                 <h1 class="text-4xl font-bold mb-4">{{ $post->title }}</h1>
                 <p class="mb-4">Published on {{ $post->updated_at}}</p>
-                <img src="https://via.placeholder.com/800x400" alt="Blog Post Image" class="mb-8 rounded-lg">
-                <p class="mt-5">{!! $post->body !!}</p> 
+                @if($post->featured_image)
+                <img src="{{ $post->featured_image->getUrl('preview') }}" alt="Blog Post Image" class="mb-8 rounded-lg">
+                @endif
+                <p class="mt-5">{!! $post->body !!}</p>
             </article>
         </div>
     </div>
     <livewire:subscriber-component />
-    <x-footer-component/>
+    <x-footer-component />
 </body>
+
 </html>
