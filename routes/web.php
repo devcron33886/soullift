@@ -20,7 +20,10 @@ use App\Http\Controllers\StoryShowController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', LandingPageController::class)->name('welcome');
-Route::get('/about-me', AboutController::class)->name('about-me');
+
+Route::get('/welcome-note', function () {
+    return view('welcome-note');
+})->name('welcome-note');
 
 Route::get('/blog', BlogController::class)->name('blog.index');
 
