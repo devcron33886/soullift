@@ -38,8 +38,8 @@
                 
                 @foreach($stories as $story)
                     <div class="bg-white rounded shadow-lg overflow-hidden">
-                        @if($story->featured_iamge)
-                        <img src="https://www.buymeacoffee.com/assets/img/guidelines/logo-mark-3.svg" alt="Post Image" class="w-full h-auto object-cover">
+                        @if($story->featured_image)
+                        <img src="{{ $story->featured_image->getUrl('preview') }}" alt="{{ $story->title}}" class="w-full h-auto object-cover">
                         @endif
                         <div class="p-4">
                             <h2 class="text-lg font-semibold mb-2">{{ $story->title}}</h2>

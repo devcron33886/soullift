@@ -28,31 +28,21 @@
 
             <div class="mb-16 md:mb-36 flex mt-20">
                 <div class="md:w-3/4 text-md md:text-lg md:leading-8 mt-24">
-                    <h1 class="text-4xl md:text-6xl font-extrabold text-amber-700">Stories
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-amber-700">{{ $story->title}}
                     </h1>
 
                 </div>
             </div>
-            
-                <!-- Blog post header -->
-                <div class="py-8">
-                    <h1 class="text-3xl font-bold mb-2">Blog post title</h1>
-                    <p class="text-gray-500 text-sm">Published on <time datetime="2022-04-05">April 5, 2022</time></p>
-                </div>
 
                 <!-- Featured image -->
-                <img src="https://images.unsplash.com/photo-1493723843671-1d655e66ac1c" alt="Featured image" class="w-full h-auto mb-8">
+                @if($post->featured_image)
+                <img src="{{ $story->featured_image->getUrl('preview') }}" alt="{{ $story->title }}" class="w-full h-auto mb-8">
+                @endif
 
                 <!-- Blog post content -->
-                <div class="prose prose-sm sm:prose lg:prose-lg xl:prose-xl mx-auto">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus varius fringilla augue, vel vestibulum
-                        nisl mattis vel. Praesent porttitor pharetra purus eu tincidunt.</p>
-                    <p>Nullam vitae sapien non est suscipit blandit quis sit amet ipsum. Aliquam euismod accumsan nunc, in
-                        convallis felis luctus in. Sed rhoncus metus a elit rutrum aliquam.</p>
-                    <p>Integer ullamcorper leo nulla, nec commodo metus vehicula eget. Duis vel vestibulum tellus, eget mattis
-                        quam. Nullam euismod libero sed nibh tristique, vel eleifend risus sagittis. In hac habitasse platea
-                        dictumst. Sed dapibus magna at arcu euismod, a pulvinar turpis tristique. Suspendisse imperdiet velit
-                        nec lectus rutrum varius.</p>
+                <div class="prose prose-sm sm:prose lg:prose-lg xl:prose-xl mx-auto text-white">
+                    <p>{!! $story->body !!}</p>
+                    
                 </div>
         </main>
         <livewire:subscriber-component />

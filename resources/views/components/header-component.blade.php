@@ -19,9 +19,13 @@
                 </button>
             </div>
             <div class="hidden lg:flex lg:gap-x-12">
-                <a href="/about-me" class="uppercase italic hover:not-italic  font-extrabold leading-6 text-white">About Me</a>
+                <a href="/" class="uppercase italic hover:not-italic  font-extrabold leading-6 text-white">Home</a>
+                <a href="/welcome-note" class="uppercase italic hover:not-italic font-extrabold leading-6 text-white">
+                    Welcome
+                </a>
                 <a href="/blog" class="uppercase italic hover:not-italic  font-extrabold leading-6 text-white">Blog</a>
-                <a href="{{ route('stories.index')}}" class="uppercase italic hover:not-italic  font-extrabold leading-6 text-white">Stories</a>
+                <a href="" class="uppercase italic hover:not-italic font-extrabold leading-6 text-white">
+                Contact</a>
 
 
             </div>
@@ -52,7 +56,7 @@
                             <a href="#"
                                 class="uppercase -mx-3 block rounded-lg px-3 py-2 text-base font-extrabold leading-7 text-white hover:bg-gray-50">About
                                 me</a>
-                            <a href="#"
+                            <a href="/blog"
                                 class="uppercase -mx-3 block rounded-lg px-3 py-2 text-base font-extrabold leading-7 text-white hover:bg-gray-50">Blog</a>
                             <a href="{{ route('stories.index')}}"
                                 class="uppercase -mx-3 block rounded-lg px-3 py-2 text-base font-extrabold leading-7 text-white hover:bg-gray-50">Stories</a>
