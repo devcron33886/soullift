@@ -25,6 +25,10 @@ Route::get('/welcome-note', function () {
     return view('welcome-note');
 })->name('welcome-note');
 
+Route::get('/contact-us', function(){
+    return view('contact');
+})->name('contact');
+
 Route::get('/blog', BlogController::class)->name('blog.index');
 
 Route::get('/blog/{post:slug}', ShowblogController::class)->name('blog.show');

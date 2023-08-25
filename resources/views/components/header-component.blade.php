@@ -24,7 +24,7 @@
                     Welcome
                 </a>
                 <a href="/blog" class="uppercase italic hover:not-italic  font-extrabold leading-6 text-white">Blog</a>
-                <a href="" class="uppercase italic hover:not-italic font-extrabold leading-6 text-white">
+                <a href="/contact-us" class="uppercase italic hover:not-italic font-extrabold leading-6 text-white">
                 Contact</a>
 
 
@@ -53,13 +53,15 @@
                 <div class="mt-6 flow-root">
                     <div class="-my-6 divide-y divide-gray-500/10">
                         <div class="space-y-2 py-6">
-                            <a href="#"
-                                class="uppercase -mx-3 block rounded-lg px-3 py-2 text-base font-extrabold leading-7 text-white hover:bg-gray-50">About
+                            <a href="/"
+                                class="uppercase -mx-3 block rounded-lg px-3 py-2 text-base font-extrabold leading-7 text-white hover:bg-gray-50">Home
                                 me</a>
+                            <a href="/welcome-note"
+                                class="uppercase -mx-3 block rounded-lg px-3 py-2 text-base font-extrabold leading-7 text-white hover:bg-gray-50">Welcome</a>
                             <a href="/blog"
                                 class="uppercase -mx-3 block rounded-lg px-3 py-2 text-base font-extrabold leading-7 text-white hover:bg-gray-50">Blog</a>
-                            <a href="{{ route('stories.index')}}"
-                                class="uppercase -mx-3 block rounded-lg px-3 py-2 text-base font-extrabold leading-7 text-white hover:bg-gray-50">Stories</a>
+                            <a href="/contact-us"
+                                class="uppercase -mx-3 block rounded-lg px-3 py-2 text-base font-extrabold leading-7 text-white hover:bg-gray-50">Contact</a>
 
                         </div>
                     </div>

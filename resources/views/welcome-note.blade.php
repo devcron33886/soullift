@@ -43,17 +43,33 @@
         <!-- Header section -->
         <div class="px-6 pt-14">
             <div class="mx-auto max-w-7xl pt-24 text-left sm:pt-40  lg:px-8">
-                <h2 class="text-4xl font-bold tracking-tight text-amber-600 sm:text-6xl">Welcome to Soul Lift – A Sanctuary of Resilience and Connection</h2>
-                <p class="mt-6 text-lg leading-8 text-gray-300">
-                    Greetings, dear souls, and welcome to Soul Lift! This is a haven of emotional well-being, a space where you become a part of a community rooted in shared experiences, boundless compassion, and the unbreakable spirit of growth. Life's journey is peppered with trials and tribulations, shaping us through both darkness and transformation.
+                <h2 class="text-4xl font-bold tracking-tight text-amber-600 sm:text-3xl">Welcome to Soul Lift – A Sanctuary of Resilience and Connection</h2>
+                <p class="mt-8 text-2xl text-lg leading-8 text-gray-300">
+                    Greetings, dear souls, and welcome to Soul Lift! This is a haven of emotional well-being, a space where you become a part of a community rooted in shared experiences, boundless compassion, and the unbreakable spirit of growth.
+
+                    Life&#39;s journey is peppered with trials and tribulations, shaping us through both darkness and transformation. The path we tread might be lined with diverse traumas, igniting an unwavering passion for nurturing emotional wellness.
                 </p>
             </div>
         </div>
         <!-- Content section -->
-        <div class="mx-auto mt-20 max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto mt-8 max-w-7xl px-6 lg:px-8">
             <div class="text-white text-lg leading-8">
-                <p>The path we tread might be lined with diverse traumas, igniting an unwavering passion for nurturing emotional wellness. Soul Lift is more than a blog; it's a vision that believes every individual, irrespective of their background, deserves a place of belonging and the promise of brighter tomorrows. Through the power of personal stories and the connection that blooms from shared experiences, we aim to construct bridges of understanding, dismantle the chains of stigma, and sow the seeds of openness. While not a professional counselor, the advocacy for emotional well-being stems from a journey of resilience and an enduring empathy for all souls treading this intricate path of life. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id.</p>
-                <p class="mt-8">Here, we embark on a joint expedition of self-discovery – a journey where everyone uplifts one another, learns from experts, and weaves a tapestry of empowerment and support. Soul Lift is more than just a space; it's a sanctuary where we celebrate growth, nurture resilience, and ignite the flames of hope. In our collective stories, we find strength, solace, and the realization that none of us are alone in our struggles. Together, we become a force that uplifts, heals, and renews. So, whether seeking comfort, understanding, or simply a sense of connection, know that you have found a warm and welcoming corner of the internet right here at Soul Lift. From the depths of each heart to the depths of yours, an invitation stands to join this remarkable journey of healing, growth, and unwavering hope with boundless warmth.</p>
+                <p>Soul Lift is more than a blog; it&#39;s a vision that believes every individual, irrespective of their background,
+deserves a place of belonging and the promise of brighter tomorrows. Through the power of personal
+stories and the connection that blooms from shared experiences, we aim to construct bridges of
+understanding, dismantle the chains of stigma, and sow the seeds of openness.
+While not a professional counselor, the advocacy for emotional well-being stems from a journey of
+resilience and an enduring empathy for all souls treading this intricate path of life. Here, we embark on a
+joint expedition of self-discovery – a journey where everyone uplifts one another, learns from experts,
+and weaves a tapestry of empowerment and support.</p>
+                <p class="mt-8">Soul Lift is more than just a space; it&#39;s a sanctuary where we celebrate growth, nurture resilience, and
+ignite the flames of hope. In our collective stories, we find strength, solace, and the realization that none
+of us are alone in our struggles. Together, we become a force that uplifts, heals, and renews.
+So, whether seeking comfort, understanding, or simply a sense of connection, know that you&#39;ve found a
+warm and welcoming corner of the internet right here at Soul Lift. From the depths of each heart to the
+depths of yours, an invitation stands to join this remarkable journey of healing, growth, and unwavering
+hope.</p>
+<p class="underline underline-offset-8 mt-8">With boundless warmth, The Soul Lift Team</p>
             </div>
         </div>
 
