@@ -72,7 +72,7 @@
                 <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-2 lg:gap-8">
                     <div class="rounded-2xl bg-gray-50 p-10">
                         <h3 class="text-base font-semibold leading-7 text-gray-900">Email us</h3>
-                        <dl class="mt-3 space-y-1 text-sm leading-6 text-gray-600">
+                        <dl class="mt-3 space-y-1 text-sm leading-6 text-gray-900">
                             <div>
                                 <dt class="sr-only">Email</dt>
                                 <dd>
@@ -83,7 +83,7 @@
                     </div>
                     <div class="rounded-2xl bg-gray-50 p-10">
                         <h3 class="text-base font-semibold leading-7 text-gray-900">Follow us</h3>
-                        <dl class="mt-3 space-y-1 text-sm leading-6 text-gray-600">
+                        <dl class="mt-3 space-y-1 text-sm leading-6 text-gray-900">
                             <div>
                                 <dt class="sr-only">X(Twitter)</dt>
                                 <dd><a class="font-semibold text-gray-900" href="{{ $biography->twitter }}" target="_blank">Soul Lift</a></dd>
@@ -93,7 +93,7 @@
                     </div>
                     <div class="rounded-2xl bg-gray-50 p-10">
                         <h3 class="text-base font-semibold leading-7 text-gray-900">Follow us</h3>
-                        <dl class="mt-3 space-y-1 text-sm leading-6 text-gray-600">
+                        <dl class="mt-3 space-y-1 text-sm leading-6 text-gray-900">
                             <div>
                                 <dt class="sr-only">Instagram</dt>
                                 <dd><a class="font-semibold text-gray-900" href="{{ $biography->twitter }}" target="_blank">Soul Lift</a></dd>
