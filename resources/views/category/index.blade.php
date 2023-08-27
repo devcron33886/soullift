@@ -59,7 +59,7 @@
                                             <time datetime="{{ $post->created_at->format('M d, Y') }}" class="text-white">{{ $post->created_at->format('M d, Y') }}</time>
                                             
                                         </div>
-                                        <div class="group relative max-w-xl">
+                                        <div class="group relative max-w-xl text-white">
                                             <h3 class="mt-3 text-lg font-semibold leading-6 text-white group-hover:text-amber-600">
                                                 <a href="{{ route('blog.show',$post->slug)}}"><span class="absolute inset-0"></span>{{ $post->title }}</a>
                                             </h3>
