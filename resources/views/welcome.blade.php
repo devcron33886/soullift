@@ -4,8 +4,22 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="welcome to Soul Lift! This is a haven of emotional well-being, a space where you become a part of a community rooted in shared experiences, boundless compassion, and the unbreakable spirit of growth. Life's journey is peppered with trials and tribulations, shaping us through both darkness and transformation. ">
+    <meta name="keywords" content="soullift,Soul Lift,Greetings, souls, welcome,emotional,well-being">
+    <link rel="canonical" href="https://www.soullift.info">
+    <meta name="robots" content="index, follow">
+    <!-- Open Graph (OG) Meta Tags -->
+    <meta property="og:title" content="Home">
+    <meta property="og:description" content="welcome to Soul Lift! This is a haven of emotional well-being, a space where you become a part of a community rooted in shared experiences, boundless compassion, and the unbreakable spirit of growth. Life's journey is peppered with trials and tribulations, shaping us through both darkness and transformation.">
+    <meta property="og:image" content="{{ asset('images/hero.png') }}">
+    <meta property="og:url" content="https://www.soullift.info">
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Home">
+    <meta name="twitter:description" content="welcome to Soul Lift! This is a haven of emotional well-being, a space where you become a part of a community rooted in shared experiences, boundless compassion, and the unbreakable spirit of growth. Life's journey is peppered with trials and tribulations, shaping us through both darkness and transformation.">
+    <meta name="twitter:image" content="{{ asset('images/helo.png') }}">
 
-    {!! SEO::generate() !!}
+    <title>Home</title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -17,7 +31,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+   
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 

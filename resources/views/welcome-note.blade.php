@@ -17,7 +17,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Welcome note">
     <meta name="twitter:description" content="Greetings, dear souls, and welcome to Soul Lift! This is a haven of emotional well-being, a space where you become a part of a community rooted in shared experiences, boundless compassion, and the unbreakable spirit of growth. Life's journey is peppered with trials and tribulations, shaping us through both darkness and transformation.">
-    <meta name="twitter:image" content="{{ asset('images/hero.png') }}">
+    <meta name="twitter:image" content="{{ asset('images/welcome.jpg') }}">
 
     <title>Welcome note</title>
 
