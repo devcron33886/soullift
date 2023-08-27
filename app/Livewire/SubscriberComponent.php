@@ -9,7 +9,8 @@ use Livewire\Component;
 
 class SubscriberComponent extends Component
 {
-    #[Rule('required|email|min:5', message: 'You need to provide the email')]
+    #[Rule('required|email|min:5|unique:subscribers', message: '')]
+
     public string $email = '';
 
     public function subscribe(): RedirectResponse

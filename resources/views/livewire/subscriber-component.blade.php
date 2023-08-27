@@ -14,13 +14,12 @@
                            placeholder="Enter your email">
 
 
+
                     <button type="submit"
                             class="flex-none rounded-md bg-gray-900 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-amber-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
                         Notify
                         me
                     </button>
-
-
                 </div>
                 <x-input-error :messages="$errors->get('email')" class="mt-2 text-2xl font-semibold"/>
 
