@@ -50,7 +50,7 @@
                 </h1>
                 <p class="mt-6 text-lg leading-8 text-gray-300">{{ $biography->description }}</p>
                 <div class="mt-10 flex items-center gap-x-6">
-                    <a href="/about-me"
+                    <a href="/welcome-note"
                         class="rounded-md bg-amber-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gray-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600">
                         Read more</a>
 
