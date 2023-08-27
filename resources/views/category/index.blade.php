@@ -57,7 +57,7 @@
                                     <div>
                                         <div class="flex items-center gap-x-4 text-xs">
                                             <time datetime="{{ $post->created_at->format('M d, Y') }}" class="text-white">{{ $post->created_at->format('M d, Y') }}</time>
-                                            <p class="relative z-10 rounded-full bg-white px-3 py-1.5 font-medium text-gray-900 hover:bg-amber-600">{{ $post->category->title }}</p>
+                                            
                                         </div>
                                         <div class="group relative max-w-xl">
                                             <h3 class="mt-3 text-lg font-semibold leading-6 text-white group-hover:text-amber-600">
