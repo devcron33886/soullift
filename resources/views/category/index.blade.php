@@ -48,48 +48,38 @@
                             <div class="mt-16 space-y-20 lg:mt-20 lg:space-y-20">
                                 @foreach ($posts as $post)
                                 <article class="relative isolate flex flex-col gap-8 lg:flex-row">
-                                    <a href="{{ route('blog.show',$post->slug)}}">
-                                        <div
-                                            class="relative aspect-[16/9] sm:aspect-[2/1] lg:aspect-square lg:w-64 lg:shrink-0">
-                                            @if($post->featured_image)
-                                            <img src="{{ $post->featured_image->getUrl('preview') }}" alt=""
-                                                class="absolute inset-0 h-full w-full rounded-2xl bg-gray-50 object-cover">
-                                            @endif
-                                            <div
-                                                class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10">
-                                            </div>
+                                    <div class="relative aspect-[16/9] sm:aspect-[2/1] lg:aspect-square lg:w-64 lg:shrink-0">
+                                        @if($post->featured_image)
+                                        <img src="{{ $post->featured_image->getUrl('preview') }}" alt="{{ $post->title}}" class="absolute inset-0 h-full w-full rounded-2xl bg-gray-50 object-cover">
+                                        @endif
+                                        <div class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
+                                    </div>
+                                    <div>
+                                        <div class="flex items-center gap-x-4 text-xs">
+                                            <time datetime="{{ $post->created_at->format('M d, Y') }}" class="text-white">{{ $post->created_at->format('M d, Y') }}</time>
+                                            <p class="relative z-10 rounded-full bg-white px-3 py-1.5 font-medium text-gray-900 hover:bg-amber-600">{{ $post->category->title }}</p>
                                         </div>
-                                        <div>
-                                            <div class="flex items-center gap-x-4 text-xs">
-                                                <time datetime="2020-03-16" class="text-white">{{ $post->created_at
-                                                    }}</time>
-                                            </div>
-                                            <div class="group relative max-w-xl mt-5 text-white">
-                                                <h3
-                                                    class="text-lg font-semibold leading-6 text-white group-hover:text-gray-200">
-                                                    <a href="{{ route('blog.show',$post->slug)}}">
-                                                        <span class="absolute inset-0"></span>
-                                                        {{ $post->title }}
-                                                    </a>
-                                                </h3>
-                                                <p class="text-white">{!!Str::limit($post->body,
-                                                    250) !!}</p>
-                                            </div>
-                                            <div class="mt-4 flex border-t border-gray-900/5 pt-6">
-                                                <div class="relative flex items-center gap-x-4">
-                                                    <div class="text-sm leading-6">
-                                                        <p class="font-semibold text-white">
-                                                            <a href="#">
-                                                                <span class="absolute inset-0"></span>
-                                                                By {{ $post->author->name }}
-                                                            </a>
-                                                        </p>
-                                                        
-                                                    </div>
+                                        <div class="group relative max-w-xl">
+                                            <h3 class="mt-3 text-lg font-semibold leading-6 text-white group-hover:text-amber-600">
+                                                <a href="{{ route('blog.show',$post->slug)}}"><span class="absolute inset-0"></span>{{ $post->title }}</a>
+                                            </h3>
+                                            <p class="mt-5 text-sm leading-6 text-white">{!!Str::limit($post->body,250) !!}</p>
+                                        </div>
+                                        <div class="mt-6 flex border-t border-gray-900/5 pt-6">
+                                            <div class="relative flex items-center gap-x-4">
+                                                <img src="{{ asset('images/hero.png')}}" alt="" class="h-10 w-10 rounded-full bg-gray-50">
+                                                <div class="text-sm leading-6">
+                                                    <p class="font-semibold text-white">
+                                                        <a href="#">
+                                                            <span class="absolute inset-0"></span>
+                                                            {{ $post->author->name }}
+                                                        </a>
+                                                    </p>
+                                                    <p class="text-white">Author</p>
                                                 </div>
                                             </div>
                                         </div>
-                                    </a>
+                                    </div>
                                 </article>
                                 @endforeach
 
